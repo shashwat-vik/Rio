@@ -1,4 +1,4 @@
-{
+*{
     border: 1px solid red !important;
 }
 
@@ -6,13 +6,29 @@ body {
     padding: 40px 0;
 }
 
-.question {
-    font-size: 2em;
+.banner {
+    font-size: 1.6em;
     font-weight: bold;
 }
 
+.question {
+    color: #717171;
+    font-size: 2em;
+    padding-top: 1em;
+}
+
 .top_clear {
-  padding-top: 0.5em;
+  padding-top: 1.2em;
+}
+
+.header_element {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.option {
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .lock {
@@ -25,16 +41,6 @@ body {
     padding: 10px 25px;
     display: block;
     margin-top: 40px;
-}
-
-.header_element {
-    font-size: 4em;
-    font-weight: bold;
-}
-
-.option {
-    font-size: 1.3em;
-    font-weight: bold;
 }
 
 .box-icon {

@@ -7,47 +7,101 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
-                <div class="box">
-                    <div class="box-icon">
-                        <span class="header_element">1</span>
+            <div class="col-xs-2 col-sm-2 col-md-2 pull-left">
+                <a href="{{data['prev']}}" class="glyphicon glyphicon-arrow-left banner"></a>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 pull-right">
+                <a href="{{data['next']}}" class="glyphicon glyphicon-arrow-right pull-right banner"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 box">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="box-icon">
+                            <span class="header_element">{{data['q_idx']}}</span>
+                        </div>
                     </div>
-                    <div class="info">
-                        <p>Who is president of India ?</p>
-                        <div class="answer_box">
-                            <input class="form-control input-lg" id="myInput" placeholder="Your Answer" type="text">
-                        </div>
-                        <div class="text-center top_clear">
-                            <span>
-                                <a href="" class="btn btn-info click_option" data-toggle="modal" data-target="#myModal">SUBMIT</a>
-                            </span>
-                            &nbsp&nbsp&nbsp&nbsp&nbsp
-                            <span>
-                                <a href="" class="btn btn-warning click_option">PASS</a>
-                            </span>
-                        </div>
-                        <div id="myModal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">×</button>
-                                        <h4 class="modal-title">Error!!</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Sorry your server request has been declined</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 question">
+                        <p>{{data['question']}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 answer_box">
+                        <input class="form-control input-lg" id="myInput" placeholder="Your Answer" type="text">
+                    </div>
+                </div>
+                <div class="row top_clear">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <a href="" class="btn btn-info click_option" id="submit" data-toggle="modal" data-target="#aModal">SUBMIT</a>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp
+                        <a href="" class="btn btn-warning click_option">PASS</a>
+                    </div>
+                </div>
+                <div class="row" style="padding-top:2.5em;">
+                    <div class="col-xs-4 col-sm-2 col-md-2 col-xs-offset-4 col-sm-offset-5 col-md-offset-5 tries_left">
+                        <h4 class="updated_number well well-sm text-center"><b>8</b></h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<div id="cModal" class="modal fade" role="dialog" style="padding-top:6em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:green;"><b>CORRECT ANSWER</b></h2>
+            </div>
+            <div class="modal-body text-center">
+                <span class="glyphicon glyphicon-thumbs-up header_element"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="wModal" class="modal fade" role="dialog" style="padding-top:6em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:red;"><b>WRONG ANSWER</b></h2>
+            </div>
+            <div class="modal-body text-center">
+                <span class="glyphicon glyphicon-thumbs-down header_element"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="aModal" class="modal fade" role="dialog" style="padding-top:6em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:red;"></h2>
+            </div>
+            <div class="modal-body text-center">
+                <span class="glyphicon glyphicon-flag header_element"></span>
+                <h2 class="modal-title text-center top_clear" style="color:red; font-size: 30px"><b>{{data['answer']}}</b></h2>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hidden" hidden>
+    <div class="1994" id="1" secanswer="{{data['answer']}}">
+</div>
 <script type="text/javascript" src="{{url_for('static',filename='js/jquery-3.2.0.min.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='js/round_1.js')}}"></script>
 </html>

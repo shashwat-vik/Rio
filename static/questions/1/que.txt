@@ -1,0 +1,3 @@
+["Who is the President of India ?", "Pranab Mukherjee"]
+["When was Steve Jobs born ?", "1955"]
+["When was Khilji dynasty established ?", "1290"]
