@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/round_1.css')}}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
+                <div class="box">
+                    <div class="box-icon">
+                        <span class="header_element">1</span>
+                    </div>
+                    <div class="info">
+                        <p>Who is president of India ?</p>
+                        <div class="answer_box">
+                            <input class="form-control input-lg" id="myInput" placeholder="Your Answer" type="text">
+                        </div>
+                        <div class="text-center top_clear">
+                            <span>
+                                <a href="" class="btn btn-info click_option" data-toggle="modal" data-target="#myModal">SUBMIT</a>
+                            </span>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp
+                            <span>
+                                <a href="" class="btn btn-warning click_option">PASS</a>
+                            </span>
+                        </div>
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                        <h4 class="modal-title">Error!!</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Sorry your server request has been declined</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="{{url_for('static',filename='js/jquery-3.2.0.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+</html>

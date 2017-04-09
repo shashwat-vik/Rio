@@ -1,0 +1,57 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/first_page.css')}}" rel="stylesheet">
+</head>
+<body>
+    <div class="container how-it-works">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-cente">
+                <span class="header_element pull-left">ASME</span>
+                <span class="header_element pull-right">IEM</span>
+            </div>
+        </div>
+        <div class="row bottom_clear">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <span class="header_element">Q-FIESTA</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 center_anomaly">
+                <div class="event_type clearfix">
+                    <a href="#">
+                        <div class="wrapper clearfix"></div>
+                        <img src="{{url_for('static',filename='icons/trophy.png')}}">
+                        <div class="info icon_element">
+                            <h2 style="padding-top:20px;">QUIZ</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 center_anomaly">
+                <div class="event_type clearfix">
+                    <a href="#">
+                        <div class="wrapper clearfix"></div>
+                        <img src="{{url_for('static',filename='icons/audience.png')}}">
+                        <div class="info icon_element">
+                            <h2 style="padding-top:20px;">AUDIENCE</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 center_anomaly">
+                <div class="event_type clearfix">
+                    <a href="#">
+                        <div class="wrapper clearfix"></div>
+                        <img src="{{url_for('static',filename='icons/tie-breaker.png')}}">
+                        <div class="info icon_element">
+                            <h2>TIE BREAKER</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
