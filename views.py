@@ -16,3 +16,11 @@ def round_1():
 @app.route("/2")
 def round_2():
     return render_template("round_2.html")
+
+@app.route("/3")
+def round_3():
+    return render_template("round_3.html")
+
+@app.route("/4")
+def round_4():
+    return render_template("round_4.html")
