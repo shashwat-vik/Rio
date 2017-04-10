@@ -16,34 +16,41 @@
         </div>
         <div class="row">
             <div class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 box">
+                {% if not data.get('header_hide') -%}
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="box-icon">
+                            <div class="timer_container" id="timer" hidden></div>
                             <span class="header_element">{{data['q_idx']}}</span>
                         </div>
                     </div>
                 </div>
+                {%- endif %}
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center question">
-                        <div>{{data['question']}}</div>
+                        <div>{{data['question']|safe}}</div>
                     </div>
                 </div>
                 <div class="row que_options top_clear">
-                    <div class="col-xs-12 col-sm-12 col-md-12 top_clear">
-                        <div class="row">
-                            <div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 btn btn-default option" id="1">
-                                <div>{{data['option1']}}</div>
-                            </div>
-                            <div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 btn btn-default option" id="2">
-                                <div class>{{data['option2']}}</div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="row bottom_clear">
+                            <div class="col-xs-12 col-sm-12 col-md-12 btn btn-default option" id="1">
+                                <div>{{data['option1']|safe}}</div>
                             </div>
                         </div>
-                        <div class="row top_clear">
-                            <div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 btn btn-default option" id="3">
-                                <div>{{data['option3']}}</div>
+                        <div class="row bottom_clear">
+                            <div class="col-xs-12 col-sm-12 col-md-12 btn btn-default option" id="2">
+                                <div>{{data['option2']|safe}}</div>
                             </div>
-                            <div class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 btn btn-default option" id="4">
-                                <div class>{{data['option4']}}</div>
+                        </div>
+                        <div class="row bottom_clear">
+                            <div class="col-xs-12 col-sm-12 col-md-12 btn btn-default option" id="3">
+                                <div>{{data['option3']|safe}}</div>
+                            </div>
+                        </div>
+                        <div class="row bottom_clear">
+                            <div class="col-xs-12 col-sm-12 col-md-12 btn btn-default option" id="4">
+                                <div>{{data['option4']|safe}}</div>
                             </div>
                         </div>
                     </div>
@@ -57,10 +64,29 @@
         </div>
     </div>
 </body>
+<div id="tModal" class="modal fade" role="dialog" style="padding-top:6em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:red;"></h2>
+            </div>
+            <div class="modal-body text-center">
+                <span class="glyphicon glyphicon-time header_element"></span>
+                <h2 class="modal-title text-center top_clear" style="color:red; font-size: 30px"><b>TIME UP!</b></h2>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="hidden" hidden>
     <div class="1994" id="1" secanswer="{{data['answer']}}">
 </div>
 <script type="text/javascript" src="{{url_for('static',filename='js/jquery-3.2.0.min.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='js/progressbar.min.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static',filename='js/round_2.js')}}"></script>
 </html>

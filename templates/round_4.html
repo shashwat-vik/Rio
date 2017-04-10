@@ -6,6 +6,122 @@
 </head>
 <body>
     <div class="container">
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-2 pull-left">
+                <a href="{{data['prev']}}" class="glyphicon glyphicon-arrow-left banner"></a>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 pull-right">
+                <a href="{{data['next']}}" class="glyphicon glyphicon-arrow-right pull-right banner"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 box">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="box-icon">
+                            <div class="timer_container" id="timer" hidden></div>
+                            <span class="header_element">{{data['q_idx']}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 question text-center">
+                        <p>{{data['question']}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 question text-center">
+                        <video width="{{data['width']|default(400, true)}}" controls>
+                            <source src="{{data['path']}}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="row top_clear">
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 answer_box">
+                        <input class="form-control input-lg" id="myInput" placeholder="Your Answer" type="text">
+                    </div>
+                </div>
+                <div class="row top_clear">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <a href="" class="btn btn-info click_option" id="submit" data-toggle="modal" data-target="">SUBMIT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+<div id="cModal" class="modal fade" role="dialog" style="padding-top:6em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:green;"><b>CORRECT ANSWER</b></h2>
+            </div>
+            <div class="modal-body text-center">
+                <span class="glyphicon glyphicon-thumbs-up header_element"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="wModal" class="modal fade" role="dialog" style="padding-top:6em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:red;"><b>WRONG ANSWER</b></h2>
+            </div>
+            <div class="modal-body text-center">
+                <span class="glyphicon glyphicon-thumbs-down header_element"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="aModal" class="modal fade" role="dialog" style="padding-top:6em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:red;"></h2>
+            </div>
+            <div class="modal-body text-center">
+                <span class="glyphicon glyphicon-flag header_element"></span>
+                <h2 class="modal-title text-center top_clear" style="color:red; font-size: 30px"><b>{{data['answer']}}</b></h2>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="tModal" class="modal fade" role="dialog" style="padding-top:6em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:red;"></h2>
+            </div>
+            <div class="modal-body text-center">
+                <span class="glyphicon glyphicon-time header_element"></span>
+                <h2 class="modal-title text-center top_clear" style="color:red; font-size: 30px"><b>TIME UP!</b></h2>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hidden" hidden>
+    <div class="1994" id="1" secanswer="{{data['answer']}}">
+</div>
+<script type="text/javascript" src="{{url_for('static',filename='js/jquery-3.2.0.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='js/progressbar.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='js/round_4.js')}}"></script>
 </html>

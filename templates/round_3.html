@@ -6,7 +6,15 @@
 </head>
 <body>
     <div class="container">
-        <div class="row top_clear">
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-2 pull-left">
+                <a href="{{data['prev']}}" class="glyphicon glyphicon-arrow-left banner"></a>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 pull-right">
+                <a href="{{data['next']}}" class="glyphicon glyphicon-arrow-right pull-right banner"></a>
+            </div>
+        </div>
+        <div class="row top_clear" style="padding-left:16em;">
             <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                     <p style="text-align:center;">
@@ -15,9 +23,24 @@
                     <div class="caption">
                         <div class="blur"></div>
                         <div class="caption-text">
-                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">AUTOMOBILE</h3>
-                            <p>The only way out is in!</p>
-                            <a class=" btn btn-default" data-toggle="modal" data-target="#myModal">START</a>
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THERMO-DY.</h3>
+                            <p>Thermodynamics</p>
+                            <a class="btn btn-default" href="{{url_for('round_3_x', q_idx=1)}}">START</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="cuadro_intro_hover " style="background-color:#cccccc;">
+                    <p style="text-align:center;">
+                        <img src="static/icons/audience.png" class="img-responsive" alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">FLUID</h3>
+                            <p>Fluid Mechanics</p>
+                            <a class=" btn btn-default" href="{{url_for('round_3_x', q_idx=2)}}">START</a>
                         </div>
                     </div>
                 </div>
@@ -32,43 +55,13 @@
                         <div class="caption-text">
                             <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">AUTOMOBILE</h3>
                             <p>The only way out is in!</p>
-                            <a class=" btn btn-default" data-toggle="modal" data-target="#myModal">START</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-3 col-sm-3 col-md-3">
-                <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                    <p style="text-align:center;">
-                        <img src="static/icons/audience.png" class="img-responsive" alt="">
-                    </p>
-                    <div class="caption">
-                        <div class="blur"></div>
-                        <div class="caption-text">
-                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">AUTOMOBILE</h3>
-                            <p>The only way out is in!</p>
-                            <a class=" btn btn-default" data-toggle="modal" data-target="#myModal">START</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-3 col-sm-3 col-md-3">
-                <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                    <p style="text-align:center;">
-                        <img src="static/icons/audience.png" class="img-responsive" alt="">
-                    </p>
-                    <div class="caption">
-                        <div class="blur"></div>
-                        <div class="caption-text">
-                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">AUTOMOBILE</h3>
-                            <p>The only way out is in!</p>
-                            <a class=" btn btn-default" href="">START</a>
+                            <a class=" btn btn-default" href="{{url_for('round_3_x', q_idx=3)}}">START</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row top_clear">
+        <div class="row top_clear" style="padding-left:16em;">
             <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                     <p style="text-align:center;">
@@ -79,7 +72,7 @@
                         <div class="caption-text">
                             <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">AUTOMOBILE</h3>
                             <p>The only way out is in!</p>
-                            <a class=" btn btn-default" data-toggle="modal" data-target="#myModal">START</a>
+                            <a class=" btn btn-default" href="{{url_for('round_3_x', q_idx=4)}}">START</a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +87,7 @@
                         <div class="caption-text">
                             <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">AUTOMOBILE</h3>
                             <p>The only way out is in!</p>
-                            <a class=" btn btn-default" data-toggle="modal" data-target="#myModal">START</a>
+                            <a class=" btn btn-default" href="{{url_for('round_3_x', q_idx=5)}}">START</a>
                         </div>
                     </div>
                 </div>
@@ -109,22 +102,7 @@
                         <div class="caption-text">
                             <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">AUTOMOBILE</h3>
                             <p>The only way out is in!</p>
-                            <a class=" btn btn-default" data-toggle="modal" data-target="#myModal">START</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-3 col-sm-3 col-md-3">
-                <div class="cuadro_intro_hover " style="background-color:#cccccc;">
-                    <p style="text-align:center;">
-                        <img src="static/icons/audience.png" class="img-responsive" alt="">
-                    </p>
-                    <div class="caption">
-                        <div class="blur"></div>
-                        <div class="caption-text">
-                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">AUTOMOBILE</h3>
-                            <p>The only way out is in!</p>
-                            <a class=" btn btn-default" data-toggle="modal" data-target="#myModal">START</a>
+                            <a class=" btn btn-default" href="{{url_for('round_3_x', q_idx=6)}}">START</a>
                         </div>
                     </div>
                 </div>

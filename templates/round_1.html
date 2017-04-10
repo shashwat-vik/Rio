@@ -19,17 +19,18 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="box-icon">
+                            <div class="timer_container" id="timer" hidden></div>
                             <span class="header_element">{{data['q_idx']}}</span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 question">
-                        <p>{{data['question']}}</p>
+                    <div class="col-xs-12 col-sm-12 col-md-12 question text-center">
+                        <p>{{data['question']|safe}}</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 answer_box">
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 answer_box">
                         <input class="form-control input-lg" id="myInput" placeholder="Your Answer" type="text">
                     </div>
                 </div>
@@ -40,7 +41,7 @@
                         <a href="" class="btn btn-warning click_option">PASS</a>
                     </div>
                 </div>
-                <div class="row" style="padding-top:2.5em;">
+                <div class="row top_clear">
                     <div class="col-xs-4 col-sm-2 col-md-2 col-xs-offset-4 col-sm-offset-5 col-md-offset-5 tries_left">
                         <h4 class="updated_number well well-sm text-center"><b>8</b></h4>
                     </div>
@@ -98,10 +99,29 @@
         </div>
     </div>
 </div>
+<div id="tModal" class="modal fade" role="dialog" style="padding-top:6em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:red;"></h2>
+            </div>
+            <div class="modal-body text-center">
+                <span class="glyphicon glyphicon-time header_element"></span>
+                <h2 class="modal-title text-center top_clear" style="color:red; font-size: 30px"><b>TIME UP!</b></h2>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="hidden" hidden>
     <div class="1994" id="1" secanswer="{{data['answer']}}">
 </div>
 <script type="text/javascript" src="{{url_for('static',filename='js/jquery-3.2.0.min.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='js/progressbar.min.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static',filename='js/round_1.js')}}"></script>
 </html>

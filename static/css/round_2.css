@@ -1,9 +1,15 @@
-*{
+{
     border: 1px solid red !important;
 }
 
 body {
     padding: 40px 0;
+}
+
+#timer {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.6em;
 }
 
 .banner {
@@ -19,6 +25,10 @@ body {
 
 .top_clear {
   padding-top: 1.2em;
+}
+
+.bottom_clear {
+    padding-bottom: 0.5em;
 }
 
 .header_element {

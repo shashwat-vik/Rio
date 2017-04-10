@@ -11,6 +11,18 @@ $(document).ready(function(e) {
              $('#submit.click_option').attr('data-target','#aModal');
         };
     });
+    $('.box-icon').on('click', function () {
+        if (!timer_started) {
+            $('.box-icon .header_element').html('')
+            $('#timer.timer_container').removeAttr('hidden')
+            bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+            bar.text.style.fontSize = '2rem';
+            bar.animate(1.0, {}, function() {
+                $('#tModal').modal('show');
+            });
+            timer_started = true;
+        }
+    });
 });
 
 var check_answer = function () {
@@ -20,6 +32,7 @@ var check_answer = function () {
     true_answer = clean_data(true_answer)
     if (submission == true_answer) {
         $('#submit.click_option').attr('data-target','#cModal');
+        bar.stop();
     } else {
         $('#submit.click_option').attr('data-target','#wModal');
     }
@@ -35,3 +48,23 @@ var clean_data = function(data) {
     }
     return c_data;
 };
+
+var timer_started = false;
+var bar = new ProgressBar.Circle(timer, {
+  color: '#fff',
+
+  strokeWidth: 4,
+  text: {
+    autoStyleContainer: false
+  },
+  duration: 10000,
+  // Set default step function for all animate calls
+  step: function(state, circle) {
+    var value = Math.round(circle.value() * 10);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value);
+    }
+  }
+});

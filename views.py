@@ -22,7 +22,9 @@ def all_rounds():
 def round_1(q_idx):
     q_idx = int(q_idx)
     file_path = url_for('static', filename='questions/1/que.txt')
-    root = os.getcwd()
+    root = os.getcwd().replace("\\","/")
+    if not len(root.split('/seed/application')) > 1:
+        root += "/seed/application"
     file_path = root+file_path
 
     #################################################
@@ -52,7 +54,9 @@ def round_1(q_idx):
 def round_2(q_idx):
     q_idx = int(q_idx)
     file_path = url_for('static', filename='questions/2/que.txt')
-    root = os.getcwd()
+    root = os.getcwd().replace("\\","/")
+    if not len(root.split('/seed/application')) > 1:
+        root += "/seed/application"
     file_path = root+file_path
 
     #################################################
@@ -66,7 +70,7 @@ def round_2(q_idx):
         d_next = url_for('all_rounds')
     elif 1 < q_idx < 8:
         d_prev = url_for('round_2', q_idx=q_idx-1)
-        d_next = url_for('round_1', q_idx=q_idx+1)
+        d_next = url_for('round_2', q_idx=q_idx+1)
     #################################################
     data = {
     'next': d_next,
@@ -79,13 +83,108 @@ def round_2(q_idx):
     'option4':token[4],
     'answer':token[5]
     }
-
     return render_template("round_2.html", data=data)
 
 @app.route("/3")
 def round_3():
-    return render_template("round_3.html")
+    d_prev = d_next = url_for('all_rounds')
+    data = {
+    'prev':d_prev,
+    'next':d_next
+    }
+    return render_template('round_3.html', data=data)
 
-@app.route("/4")
-def round_4():
-    return render_template("round_4.html")
+@app.route("/3/<q_idx>")
+def round_3_x(q_idx):
+    q_idx = int(q_idx)
+    file_path = url_for('static', filename='questions/3/que.txt')
+    root = os.getcwd().replace("\\","/")
+    if not len(root.split('/seed/application')) > 1:
+        root += "/seed/application"
+    file_path = root+file_path
+
+    #################################################
+    d_prev = d_next = url_for('round_3')
+    token = generic_read_question(file_path, q_idx)
+    #################################################
+    data = {
+    'header_hide': True,
+    'next': d_next,
+    'prev': d_prev,
+    'q_idx': q_idx,
+    'question':token[0],
+    'option1':token[1],
+    'option2':token[2],
+    'option3':token[3],
+    'option4':token[4],
+    'answer':token[5]
+    }
+    return render_template("round_2.html", data=data)
+
+@app.route("/4/<q_idx>")
+def round_4(q_idx):
+    q_idx = int(q_idx)
+    file_path = url_for('static', filename='questions/4/que.txt')
+    root = os.getcwd().replace("\\","/")
+    if not len(root.split('/seed/application')) > 1:
+        root += "/seed/application"
+    file_path = root+file_path
+
+    #################################################
+    d_next, d_prev = None, None
+    token = generic_read_question(file_path, q_idx)
+    if q_idx == 1:
+        d_prev = url_for('all_rounds')
+        d_next = url_for('round_4', q_idx=q_idx+1)
+    elif q_idx == 8:
+        d_prev = url_for('round_4', q_idx=q_idx-1)
+        d_next = url_for('all_rounds')
+    elif 1 < q_idx < 8:
+        d_prev = url_for('round_4', q_idx=q_idx-1)
+        d_next = url_for('round_4', q_idx=q_idx+1)
+    #################################################
+    data = {
+    'next': d_next,
+    'prev': d_prev,
+    'q_idx': q_idx,
+    'question':token['question'],
+    'answer':token['answer'],
+    'width':token['width'],
+    'height':token['height'],
+    'path': url_for('static', filename='questions/4/'+token['path'])
+    }
+    return render_template("round_4.html", data=data)
+
+@app.route("/5/<q_idx>")
+def round_5(q_idx):
+    q_idx = int(q_idx)
+    file_path = url_for('static', filename='questions/5/que.txt')
+    root = os.getcwd().replace("\\","/")
+    if not len(root.split('/seed/application')) > 1:
+        root += "/seed/application"
+    file_path = root+file_path
+
+    #################################################
+    d_next, d_prev = None, None
+    token = generic_read_question(file_path, q_idx)
+    if q_idx == 1:
+        d_prev = url_for('all_rounds')
+        d_next = url_for('round_5', q_idx=q_idx+1)
+    elif q_idx == 8:
+        d_prev = url_for('round_5', q_idx=q_idx-1)
+        d_next = url_for('all_rounds')
+    elif 1 < q_idx < 8:
+        d_prev = url_for('round_5', q_idx=q_idx-1)
+        d_next = url_for('round_5', q_idx=q_idx+1)
+    #################################################
+    data = {
+    'header_hide': True,
+    'next': d_next,
+    'prev': d_prev,
+    'q_idx': q_idx,
+    'question':token[0],
+    'option1':token[1],
+    'option2':token[2],
+    'answer':token[3]
+    }
+    return render_template('round_5.html', data=data)

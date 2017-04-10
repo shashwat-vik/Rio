@@ -1,4 +1,4 @@
-*{
+{
     border: 1px solid red !important;
 }
 
@@ -6,6 +6,11 @@ body {
     padding: 40px 0;
 }
 
+#timer {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.6em;
+}
 
 .banner {
     font-size: 1.6em;
@@ -31,19 +36,6 @@ body {
 .click_option {
     font-size: 1.3em;
     font-weight: bold;
-}
-
-#myInput {
-  width:30%;
-  -webkit-transition:width 0.3s ease-in-out;
-}
-#myInput:focus {
-  width:100%;
-  -webkit-transition:width 0.5s ease-in-out;
-}
-#myInput:hover {
-  width:100%;
-  -webkit-transition:width 0.5s ease-in-out;
 }
 
 .box {
