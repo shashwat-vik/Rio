@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ROUNDS</title>
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/all_rounds.css')}}" rel="stylesheet">
+</head>
+<body>
+    <div class="container how-it-works">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <span class="header_element pull-left">
+                    <img width="150" src="{{url_for('static', filename='icons/asme.png')}}" style="padding-left:10px; padding-top:10px;">
+                </span>
+                <span class="header_element pull-right">
+                    <img width="100" src="{{url_for('static', filename='icons/iem.png')}}" style="padding-left:10px; padding-top:10px;">
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <span class="header_element" style="font-family:cursive;">Q-FIESTA</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 board">
+                <div class="board-inner">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <div class="liner"></div>
+                        <li>
+                            <a href="{{url_for('all_rounds')}}" title="Previous">
+                                <span class="round-tabs one">
+                                    <i class="glyphicon glyphicon-arrow-left"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#round4" aria-controls="round4" role="tab" data-toggle="tab" title="Round 4">
+                                <span class="round-tabs two">
+                                    4
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#round5" aria-controls="round5" role="tab" data-toggle="tab" title="Round 5">
+                                <span class="round-tabs three">
+                                    5
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#round6" aria-controls="round6" role="tab" data-toggle="tab" title="Round 6">
+                                <span class="round-tabs four">
+                                    6
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('homepage')}}" title="Next">
+                                <span class="round-tabs five">
+                                    <i class="glyphicon glyphicon-arrow-right"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="prev">
+                        <h3 class="head text-center">Round 4</h3>
+                        <p class="narrow text-center">
+                            The only way out is in.
+                        </p>
+                        <p class="text-center">
+                            <a href="" class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
+                            &nbsp &nbsp &nbsp &nbsp
+                            <a href="{{url_for('round_4', q_idx=1)}}" class="btn btn-success btn-outline-rounded green button_element"> BEGIN <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="round4">
+                        <h3 class="head text-center">Round 4</h3>
+                        <p class="narrow text-center">
+                            The only way out is in.
+                        </p>
+                        <p class="text-center">
+                            <a href="" class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
+                            &nbsp &nbsp &nbsp &nbsp
+                            <a href="{{url_for('round_4', q_idx=1)}}" class="btn btn-success btn-outline-rounded green button_element"> BEGIN <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="round5">
+                        <h3 class="head text-center">Round 5</h3>
+                        <p class="narrow text-center">
+                            The only way out is in.
+                        </p>
+                        <p class="text-center">
+                            <a href="" class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
+                            &nbsp &nbsp &nbsp &nbsp
+                            <a href="{{url_for('round_5', q_idx=1)}}" class="btn btn-success btn-outline-rounded green button_element"> BEGIN <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="round6">
+                        <h3 class="head text-center">Round 6</h3>
+                        <p class="narrow text-center">
+                            The only way out is in.
+                        </p>
+                        <p class="text-center">
+                            <a href="" class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
+                            &nbsp &nbsp &nbsp &nbsp
+                            <a href="{{url_for('round_5', q_idx=1)}}" class="btn btn-success btn-outline-rounded green button_element"> BEGIN <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="next">
+                        <div class="text-center">
+                            <i class="img-intro icon-checkmark-circle"></i>
+                        </div>
+                        <h3 class="head text-center">NEXT SECTION</h3>
+                        <p class="narrow text-center">
+                            Goto remaining rounds.
+                        </p>
+                        <p class="text-center">
+                            <a href="" class="btn btn-success btn-outline-rounded green"> NEXT <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{{url_for('static',filename='js/jquery-3.2.0.min.js')}}" type="text/javascript"></script>
+<script src="{{url_for('static',filename='js/bootstrap.min.js')}}" type="text/javascript"></script>
+</html>

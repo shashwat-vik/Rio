@@ -16,20 +16,31 @@
         </div>
         <div class="row">
             <div class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 box">
-                {% if not data.get('header_hide') -%}
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="box-icon">
                             <div class="timer_container" id="timer" hidden></div>
+                            {% if not data.get('header_hide') -%}
                             <span class="header_element">{{data['q_idx']}}</span>
+                            {% else %}
+                            <span class="header_element">
+                                <span >&nbsp</span>
+                                <span class="glyphicon glyphicon-bookmark"></span>
+                            </span>
+                            {%- endif %}
                         </div>
                     </div>
                 </div>
-                {%- endif %}
                 <div class="row">
+                {% if not data.get('header_hide') -%}
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center question">
                         <div>{{data['question']|safe}}</div>
                     </div>
+                {% else %}
+                    <div class="col-xs-12 col-sm-12 col-md-12 {{data['div_params']|default('question text-center', true)}}" style="{{data['style_params']}}">
+                        <div>{{data['question']|safe}}</div>
+                    </div>
+                {% endif %}
                 </div>
                 <div class="row que_options top_clear">
                     <div class="col-xs-12 col-sm-12 col-md-12">

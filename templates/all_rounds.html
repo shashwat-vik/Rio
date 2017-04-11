@@ -10,13 +10,17 @@
     <div class="container how-it-works">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <span class="header_element pull-left">ASME</span>
-                <span class="header_element pull-right">IEM</span>
+                <span class="header_element pull-left">
+                    <img width="150" src="{{url_for('static', filename='icons/asme.png')}}" style="padding-left:10px; padding-top:10px;">
+                </span>
+                <span class="header_element pull-right">
+                    <img width="100" src="{{url_for('static', filename='icons/iem.png')}}" style="padding-left:10px; padding-top:10px;">
+                </span>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <span class="header_element">Q-FIESTA</span>
+                <span class="header_element" style="font-family:cursive;">Q-FIESTA</span>
             </div>
         </div>
         <div class="row">
@@ -24,9 +28,16 @@
                 <div class="board-inner">
                     <ul class="nav nav-tabs" id="myTab">
                         <div class="liner"></div>
+                        <li>
+                            <a href="{{url_for('homepage')}}" title="Previous">
+                                <span class="round-tabs one">
+                                    <i class="glyphicon glyphicon-arrow-left"></i>
+                                </span>
+                            </a>
+                        </li>
                         <li class="active">
                             <a href="#round1" aria-controls="round1" role="tab" data-toggle="tab" title="Round 1">
-                                <span class="round-tabs one">
+                                <span class="round-tabs two">
                                     1
                                 </span>
                             </a>
@@ -46,16 +57,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#round4" aria-controls="round4" role="tab" data-toggle="tab" title="Round 4">
-                                <span class="round-tabs four">
-                                    4
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#doner" aria-controls="doner" role="tab" data-toggle="tab" title="Development">
+                            <a href="{{url_for('all_rounds_e')}}" title="Next">
                                 <span class="round-tabs five">
-                                    <i class="icon icon-tools-2"></i>
+                                    <i class="glyphicon glyphicon-arrow-right"></i>
                                 </span>
                             </a>
                         </li>
@@ -106,16 +110,16 @@
                             <a href="{{url_for('round_4', q_idx=1)}}" class="btn btn-success btn-outline-rounded green button_element"> BEGIN <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
                         </p>
                     </div>
-                    <div class="tab-pane fade" id="doner">
+                    <div class="tab-pane fade" id="next">
                         <div class="text-center">
                             <i class="img-intro icon-checkmark-circle"></i>
                         </div>
-                        <h3 class="head text-center">Development</h3>
+                        <h3 class="head text-center">NEXT SECTION</h3>
                         <p class="narrow text-center">
-                            In Development
+                            Goto remaining rounds.
                         </p>
                         <p class="text-center">
-                            <a href="" class="btn btn-success btn-outline-rounded green"> WAIT <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                            <a href="" class="btn btn-success btn-outline-rounded green"> NEXT <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
                         </p>
                     </div>
                     <div class="clearfix"></div>

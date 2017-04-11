@@ -6,11 +6,16 @@ $(document).ready(function(e) {
         if (submit_count <= times) {
             check_answer();
             $('.tries_left h4').html('<b>'+String(times-submit_count)+'</b>');
-        }
-         else if (submit_count == (times+1)){
+        } else if (submit_count == (times+1)){
              $('#submit.click_option').attr('data-target','#aModal');
         };
     });
+    $("#pass.click_option").click(function() {
+        submit_count += 1;
+        if (submit_count <= times)
+            $('.tries_left h4').html('<b>'+String(times-submit_count)+'</b>');
+    });
+
     $('.box-icon').on('click', function () {
         if (!timer_started) {
             $('.box-icon .header_element').html('')

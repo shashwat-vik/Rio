@@ -1,8 +1,0 @@
-["Gravity is a pulling force ?", "TRUE", "FALSE", "2"]
-["Gravity is a pulling force ?", "TRUE", "FALSE", "2"]
-["Gravity is a pulling force ?", "TRUE", "FALSE", "2"]
-["Gravity is a pulling force ?", "TRUE", "FALSE", "2"]
-["Gravity is a pulling force ?", "TRUE", "FALSE", "2"]
-["Gravity is a pulling force ?", "TRUE", "FALSE", "2"]
-["Gravity is a pulling force ?", "TRUE", "FALSE", "2"]
-["Gravity is a pulling force ?", "TRUE", "FALSE", "2"]

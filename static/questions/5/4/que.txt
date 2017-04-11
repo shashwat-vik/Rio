@@ -1,0 +1,5 @@
+["During homogeneous nucleation, critical size of a particle increases  with increase in under-cooling.", "TRUE", "FALSE", "2"]
+["Both nucleation and growth require change in free energy to be zero.", "TRUE", "FALSE", "2"]
+["'Queens berry Rules' is the name given to the rules in Boxing.", "TRUE", "FALSE", "2"]
+["Whitworth quick return motion mechanism consists of three turning pairs and one sliding pair.", "TRUE", "FALSE", "2"]
+["The thermal diffusivity for solids is generally less than those for liquid and gasses.", "TRUE", "TRUE", "2"]

@@ -29,13 +29,23 @@
                         <p>{{data['question']}}</p>
                     </div>
                 </div>
+                {% if (data['video']) %}
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 question text-center">
                         <video width="{{data['width']|default(400, true)}}" controls>
-                            <source src="{{data['path']}}" type="video/mp4">
+                            <source src="{{data['path']}}" type="video/webm">
                         </video>
                     </div>
                 </div>
+                {% else %}
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 question text-center">
+                        <div>
+                            <img width="{{data['width']|default(400, true)}}" src="{{data['path']}}">
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
                 <div class="row top_clear">
                     <div class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 answer_box">
                         <input class="form-control input-lg" id="myInput" placeholder="Your Answer" type="text">
