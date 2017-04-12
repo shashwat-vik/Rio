@@ -41,8 +41,10 @@ var check_answer = function () {
         $('#submit.click_option').attr('data-target','#cModal');
         bar.stop();
         $('.my_tick')[0].pause();
+        $('.my_right')[0].play();
     } else {
         $('#submit.click_option').attr('data-target','#wModal');
+        $('.my_wrong')[0].play();
     }
 };
 

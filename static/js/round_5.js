@@ -39,9 +39,11 @@ var create_option_highlighter = function(q, o) {
     if (answer == opt) {
         $('#'+que+'.rapid_fire #'+ opt +'.option').css('background','#33CC00');
         $('#'+que+'.rapid_fire #'+ opt +'.option').css('color','white');
+        $('.my_right')[0].play();
     } else {
         $('#'+que+'.rapid_fire #'+ opt +'.option').css('background','#CC0000');
         $('#'+que+'.rapid_fire #'+ opt +'.option').css('color','white');
+        $('.my_wrong')[0].play();
     }
 };
 var create_answer_highlighter = function(q) {

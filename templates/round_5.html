@@ -63,7 +63,9 @@
 </div>
 <div class="hidden" hidden>
     <audio class="my_tick"><source src="{{url_for('static', filename='sound/Ticking_Clock.mp3')}}"></audio>
-    <div class="1994" id=1 secanswer="{{data['answer']}}">
+    <audio class="my_right"><source src="{{url_for('static', filename='sound/correct_answer.mp3')}}"></audio>
+    <audio class="my_wrong"><source src="{{url_for('static', filename='sound/wrong_answer.mp3')}}"></audio>
+    <div class="1994" id=1 secanswer="{{data['answer']}}"></div>
 </div>
 <script type="text/javascript" src="{{url_for('static',filename='js/jquery-3.2.0.min.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>

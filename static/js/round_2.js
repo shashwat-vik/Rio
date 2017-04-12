@@ -23,7 +23,8 @@ $(document).ready(function () {
         if (selected != answer*1) {
             $('.que_options #'+ String(selected) +'.option').css('background','#CC0000');
             $('.que_options #'+ String(selected) +'.option').css('color','white');
-        }
+            $('.my_wrong')[0].play();
+        } else { $('.my_right')[0].play(); }
         $('.que_options #'+ answer +'.option').css('background','#33CC00');
         $('.que_options #'+ answer +'.option').css('color','white');
         lock_control = true;

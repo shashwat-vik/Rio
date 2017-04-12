@@ -36,8 +36,10 @@ var check_answer = function () {
     true_answer = clean_data(true_answer)
     if (submission == true_answer) {
         $('#submit.click_option').attr('data-target','#cModal');
+        $('.my_right')[0].play();
     } else {
         $('#submit.click_option').attr('data-target','#wModal');
+        $('.my_wrong')[0].play();
     }
 };
 
