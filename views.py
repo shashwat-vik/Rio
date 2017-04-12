@@ -4,6 +4,7 @@ import os
 
 audience_q_idx = 1
 tiebreaker_q_idx = 1
+round_3_disable = set()
 
 def generic_read_question(file_path, index):
     f = open(file_path, 'r')
@@ -159,13 +160,17 @@ def round_3():
     d_prev = d_next = url_for('all_rounds')
     data = {
     'prev':d_prev,
-    'next':d_next
+    'next':d_next,
+    'cleared':round_3_disable
     }
     return render_template('round_3.html', data=data)
 
 @app.route("/3/<q_idx>")
 def round_3_x(q_idx):
+    global round_3_disable
     q_idx = int(q_idx)
+    round_3_disable.add(q_idx)
+    print (round_3_disable)
     file_path = url_for('static', filename='questions/3/que.txt')
     root = os.getcwd().replace("\\","/")
     if not len(root.split('/seed/application')) > 1:
@@ -190,7 +195,6 @@ def round_3_x(q_idx):
     'style_params':token[6],
     'div_params':token[7]
     }
-    print (repr(token[6]))
     return render_template("round_2.html", data=data)
 
 @app.route("/4/<q_idx>")
@@ -250,7 +254,6 @@ def round_5(q_idx):
         d_next = url_for('round_5', q_idx=q_idx+1)
     #################################################
     question_list = generic_read_question_all(file_path)
-    print (question_list)
     token = generic_read_question(file_path, q_idx)
     data = {
     'header_hide': True,

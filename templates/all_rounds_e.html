@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>ROUNDS</title>
     <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{url_for('static', filename='css/all_rounds.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/all_rounds_e.css')}}" rel="stylesheet">
 </head>
 <body>
     <div class="container how-it-works">
@@ -66,24 +66,24 @@
                     </ul>
                 </div>
                 <div class="tab-content">
-                    <div class="tab-pane fade in active" id="prev">
-                        <h3 class="head text-center">Round 4</h3>
+                    <div class="tab-pane fade in" id="prev">
+                        <h3 class="head text-center">Previous</h3>
                         <p class="narrow text-center">
                             The only way out is in.
                         </p>
                         <p class="text-center">
-                            <a href="" class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
+                            <a class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
                             &nbsp &nbsp &nbsp &nbsp
                             <a href="{{url_for('round_4', q_idx=1)}}" class="btn btn-success btn-outline-rounded green button_element"> BEGIN <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
                         </p>
                     </div>
-                    <div class="tab-pane fade" id="round4">
+                    <div class="tab-pane fade in active" id="round4">
                         <h3 class="head text-center">Round 4</h3>
                         <p class="narrow text-center">
                             The only way out is in.
                         </p>
                         <p class="text-center">
-                            <a href="" class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
+                            <a data-toggle="modal" data-target="#rule4" class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
                             &nbsp &nbsp &nbsp &nbsp
                             <a href="{{url_for('round_4', q_idx=1)}}" class="btn btn-success btn-outline-rounded green button_element"> BEGIN <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
                         </p>
@@ -94,7 +94,7 @@
                             The only way out is in.
                         </p>
                         <p class="text-center">
-                            <a href="" class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
+                            <a data-toggle="modal" data-target="#rule5" class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
                             &nbsp &nbsp &nbsp &nbsp
                             <a href="{{url_for('round_5', q_idx=1)}}" class="btn btn-success btn-outline-rounded green button_element"> BEGIN <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
                         </p>
@@ -105,7 +105,7 @@
                             The only way out is in.
                         </p>
                         <p class="text-center">
-                            <a href="" class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
+                            <a data-toggle="modal" data-target="#rule6" class="btn btn-info btn-outline-rounded button_element"> RULES <span style="margin-left:10px;" class="glyphicon glyphicon-list-alt"></span></a>
                             &nbsp &nbsp &nbsp &nbsp
                             <a href="{{url_for('round_6', q_idx=1)}}" class="btn btn-success btn-outline-rounded green button_element"> BEGIN <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
                         </p>
@@ -128,6 +128,133 @@
         </div>
     </div>
 </body>
+<div id="rule4" class="modal fade" role="dialog" style="padding-top:6em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:red;"><b><u>RULES</u></b></h2>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>There will be five teams for this round.</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Quiz master directly ask team the question and they have to answer it.</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>For right answer team will get +20 and there will be no negative marking.</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>One team will be eliminated after this round.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="rule5" class="modal fade" role="dialog" style="padding-top:6em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:red;"><b><u>RULES</u></b></h2>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>There will be four teams for this round.</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Quiz master directly ask 5 questions to one team within 30 sec and they have to answer.</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>For every right answer they will get +10 and there will be -5 for wrong answer.</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>If team cannot answer the question they can say pass for the next.</td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <td>One team will be eliminated after this round.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="rule6" class="modal fade" role="dialog" style="padding-top:2em;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h2 class="modal-title text-center" style="color:red;"><b><u>RULES</u></b></h2>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>There will be three teams for this round.</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>They will get only one question to answer.</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>The question consists of three clues and it will be given one by one.</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>The team has to try answer as early as possible to secure more marks.</td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <td>The first team who will press the buzzer will get a chance to answer first.</td>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <td>Each team only get one chance to answer.</td>
+                        </tr>
+                        <tr>
+                            <th>7</th>
+                            <td>Point System:<br>
+                                <div style="padding-left:3em;">
+                                    <b>1st clue = 60 points</b><br>
+                                    <b>2st clue = 30 points</b><br>
+                                    <b>3st clue = 20 points</b><br>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="{{url_for('static',filename='js/jquery-3.2.0.min.js')}}" type="text/javascript"></script>
 <script src="{{url_for('static',filename='js/bootstrap.min.js')}}" type="text/javascript"></script>
 </html>
