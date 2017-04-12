@@ -2,7 +2,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{url_for('static', filename='css/round_4.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/round_6.css')}}" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -26,34 +26,19 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 question text-center">
-                        <p>{{data['question']|safe}}</p>
+                        <p>{{data['question']}}</p>
                     </div>
                 </div>
-                {% if (data['video']) %}
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 question text-center">
-                        <video width="{{data['width']|default(400, true)}}" controls>
-                            <source src="{{data['path']}}" type="video/webm">
-                        </video>
-                    </div>
-                </div>
-                {% else %}
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 question text-center">
                         <div>
-                            <img width="{{data['width']|default(400, true)}}" src="{{data['path']}}">
+                            {% if not data['path2'] %}
+                            <img width="{{data['width']|default(400, true)}}" src="{{data['path1']}}">
+                            {% else %}
+                            <img width="{{data['width']|default(300, true)}}" src="{{data['path1']}}">
+                            <img width="{{data['width']|default(300, true)}}" src="{{data['path2']}}">
+                            {% endif %}
                         </div>
-                    </div>
-                </div>
-                {% endif %}
-                <div class="row top_clear">
-                    <div class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 answer_box">
-                        <input class="form-control input-lg" id="myInput" placeholder="Your Answer" type="text">
-                    </div>
-                </div>
-                <div class="row top_clear">
-                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <a href="" class="btn btn-info click_option" id="submit" data-toggle="modal" data-target="">SUBMIT</a>
                     </div>
                 </div>
             </div>
@@ -133,5 +118,5 @@
 <script type="text/javascript" src="{{url_for('static',filename='js/jquery-3.2.0.min.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static',filename='js/progressbar.min.js')}}"></script>
-<script type="text/javascript" src="{{url_for('static',filename='js/round_4.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='js/round_6.js')}}"></script>
 </html>

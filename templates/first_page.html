@@ -7,17 +7,21 @@
 <body>
     <div class="container how-it-works">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 text-cente">
-                <span class="header_element pull-left">ASME</span>
-                <span class="header_element pull-right">IEM</span>
-            </div>
-        </div>
-        <div class="row bottom_clear">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <span class="header_element">Q-FIESTA</span>
+                <span class="header_element pull-left">
+                    <img width="150" src="{{url_for('static', filename='icons/asme.png')}}" style="padding-left:10px; padding-top:10px;">
+                </span>
+                <span class="header_element pull-right">
+                    <img width="100" src="{{url_for('static', filename='icons/iem.png')}}" style="padding-left:10px; padding-top:10px;">
+                </span>
             </div>
         </div>
         <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <span class="header_element" style="font-family:cursive;">Q-FIESTA</span>
+            </div>
+        </div>
+        <div class="row" style="padding-top:3em;">
             <div class="col-xs-4 col-sm-4 col-md-4 center_anomaly">
                 <div class="event_type clearfix">
                     <a href="{{url_for('all_rounds')}}">
@@ -31,7 +35,7 @@
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 center_anomaly">
                 <div class="event_type clearfix">
-                    <a href="#">
+                    <a href="{{url_for('audience')}}">
                         <div class="wrapper clearfix"></div>
                         <img src="{{url_for('static',filename='icons/audience.png')}}">
                         <div class="info icon_element">
@@ -42,7 +46,7 @@
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 center_anomaly">
                 <div class="event_type clearfix">
-                    <a href="#">
+                    <a href="{{url_for('tiebreaker')}}">
                         <div class="wrapper clearfix"></div>
                         <img src="{{url_for('static',filename='icons/tie-breaker.png')}}">
                         <div class="info icon_element">

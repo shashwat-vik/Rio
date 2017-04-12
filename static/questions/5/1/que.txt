@@ -1,5 +1,5 @@
-["Product Lifecycle Management (PLM) is an integrated information technology :", "TRUE", "FALSE", "2"]
+["Product Lifecycle Management (PLM) is an integrated information technology :", "TRUE", "FALSE", "1"]
 ["Acetylene must be used to pressurize a refrigeration system :", "TRUE", "FALSE", "2"]
 ["Pink Floyd, Famous British band holds the record as best selling music band worldwide ?", "TRUE", "FALSE", "2"]
-["Where a liquid line riser becomes necessary to connect to an evaporator located at higher level than the condenser, the pressure drop due to liquid lift will be high causing heavy flash in the liquid line :", "TRUE", "FALSE", "2"]
-["If there is a fall in the temperature of a composite body, then a member having greater coefficient of linear expansion will be subjected to compressive stress.", "TRUE", "TRUE", "2"]
+["Where a liquid line riser becomes necessary to connect to an evaporator located at higher level than the condenser, the pressure drop due to liquid lift will be high causing heavy flash in the liquid line :", "TRUE", "FALSE", "1"]
+["If there is a fall in the temperature of a composite body, then a member having greater coefficient of linear expansion will be subjected to compressive stress.", "TRUE", "FALSE", "2"]

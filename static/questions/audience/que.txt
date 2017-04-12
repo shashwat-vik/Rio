@@ -1,0 +1,6 @@
+["Which company holds this tagline '<b>making tomorrow brighter</b>'", "NTPC", "CESC", "ONGC", "IOCL", "4"]
+["The elongation of a conical bar under its own weight is __________ that of prismatic bar of the same length.", "one-third", "equal to", "half", "two-third", "1"]
+["A double overhung Pelton wheel has", "two runners", "two jets", "four jets", "four runners", "1"]
+["Which type of the pump is different from others in the same group ?", "Screw pump", "Gear pump", "Cam and piston pump", "Plunger pump", "4"]
+["The by-pass factor for a cooling coil :", "decreases with increase in velocity of air passing through it", "may increase or decrease with increase in velocity of air passing through it <br>depending upon the condition of air entering", "increases with increase in velocity of air passing through it", "remains unchanged with increase in velocity of air passing through it", "3"]
+["The wet bulb depression is zero when relative humidity is :", "0.5", "zero", "0.75", "1.0", "4"]

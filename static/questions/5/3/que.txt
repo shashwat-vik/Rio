@@ -1,5 +1,5 @@
 ["The welding setup is said to have reversed polarity when the work is connected to the positive terminal and the electrode holder to the negetive terminal.", "TRUE", "FALSE", "2"]
-["Fin is a casting defect which is due to thin projections of metal not intened as a part of casting.", "TRUE", "FALSE", "2"]
+["Fin is a casting defect which is due to thin projections of metal not intened as a part of casting.", "TRUE", "FALSE", "1"]
 ["The capacity of cooling tower and spray ponds decreases as the WBT of air decreases.", "TRUE", "FALSE", "2"]
-["Arsenal, British football club has never been relegated in their respective leagues.", "TRUE", "FALSE", "2"]
+["Arsenal, British football club has never been relegated in their respective leagues.", "TRUE", "FALSE", "1"]
 ["Relative amounts of phases in a region can be deduced using Phase rule.", "TRUE", "FALSE", "2"]

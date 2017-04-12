@@ -1,5 +1,5 @@
-{"question":"Identify the car model ?", "answer":"chiron", "width":"", "height":"", "path":"media/bugati.webm", "video":True}
-{"question":"Identify the refrigeration company ?", "answer":"kenwood", "width":"", "height":"", "path":"media/dc_ac.webm", "video":True}
-{"question":"Identify the company ?", "answer":"apple", "width":"", "height":"", "path":"media/refrigerator.webm", "video":True}
-{"question":"Identify the advertisement company ?", "answer":"apple", "width":"", "height":"", "path":"media/power_plant.jpeg"}
-{"question":"Identify the advertisement company ?", "answer":"apple", "width":"", "height":"", "path":"media/filter_drier.jpg"}
+{"question":"Identify this <b>Bugati's</b> car model ?", "answer":"chiron", "width":"", "height":"", "path":"media/bugati.webm", "video":True}
+{"question":"Identify this equipment ?", "answer":"damper", "width":"", "height":"", "path":"media/power_plant.jpeg"}
+{"question":"Identify this company ?", "answer":"kenwood", "width":"", "height":"", "path":"media/dc_ac.webm", "video":True}
+{"question":"Identify this equipment ?", "answer":"drier", "width":"", "height":"", "path":"media/filter_drier.jpg"}
+{"question":"Identify this company ?", "answer":"Haier", "width":"", "height":"", "path":"media/refrigerator.webm", "video":True}

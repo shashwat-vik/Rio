@@ -1,5 +1,5 @@
-["In a De-Laval impulse turbine, the nozzle is kept very close to the blade.", "TRUE", "FALSE", "2"]
+["In a De-Laval impulse turbine, the nozzle is kept very close to the blade.", "TRUE", "FALSE", "1"]
 ["A thick pressure vessel is always used for the generation of steam, as it can withstand high pressures.", "TRUE", "FALSE", "2"]
 ["Roger Federer holds the record of winning all four Majors in the same Calendar year twice.", "TRUE", "FALSE", "2"]
-["The velocity of steam, in reaction turbines, is increased in the fixed blade as well as in the moving blades.", "TRUE", "FALSE", "2"]
-["For the two shafts connected in the parallel and subjected to a twisting moment, the angle of twist of each shaft will be same.", "TRUE", "FALSE", "2"]
+["The velocity of steam, in reaction turbines, is increased in the fixed blade as well as in the moving blades.", "TRUE", "FALSE", "1"]
+["For the two shafts connected in the parallel and subjected to a twisting moment, the angle of twist of each shaft will be same.", "TRUE", "FALSE", "1"]
