@@ -11,6 +11,7 @@ $(document).ready(function(e) {
              $('#submit.click_option').attr('data-target','#aModal');
         };
         bar.stop();
+        $('.my_tick')[0].pause();
     });
     $('.box-icon').on('click', function () {
         if (!timer_started) {
@@ -20,8 +21,10 @@ $(document).ready(function(e) {
             bar.text.style.fontSize = '2rem';
             bar.animate(1.0, {}, function() {
                 $('#tModal').modal('show');
+                $('.my_tick')[0].pause();
             });
             timer_started = true;
+            $('.my_tick')[0].play();
         }
     });
 });

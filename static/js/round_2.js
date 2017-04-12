@@ -28,6 +28,7 @@ $(document).ready(function () {
         $('.que_options #'+ answer +'.option').css('color','white');
         lock_control = true;
         bar.stop();
+        $('.my_tick')[0].pause();
     });
     $('.box-icon').on('click', function () {
         if (!timer_started) {
@@ -37,8 +38,10 @@ $(document).ready(function () {
             bar.text.style.fontSize = '2rem';
             bar.animate(1.0, {}, function() {
                 $('#tModal').modal('show');
+                $('.my_tick')[0].pause();
             });
             timer_started = true;
+            $('.my_tick')[0].play();
         }
     });
 });

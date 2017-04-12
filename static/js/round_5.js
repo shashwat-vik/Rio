@@ -16,9 +16,11 @@ $(document).ready(function () {
             bar.text.style.fontSize = '2rem';
             bar.animate(1.0, {}, function() {
                 $('#tModal').modal('show');
+                $('.my_tick')[0].pause();
             });
             timer_started = true;
             $('.glyphicon-plus-sign').click();
+            $('.my_tick')[0].play();
         }
     });
 });

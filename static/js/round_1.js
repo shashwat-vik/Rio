@@ -24,8 +24,10 @@ $(document).ready(function(e) {
             bar.text.style.fontSize = '2rem';
             bar.animate(1.0, {}, function() {
                 $('#tModal').modal('show');
+                $('.my_tick')[0].pause();
             });
             timer_started = true;
+            $('.my_tick')[0].play();
         }
     });
 });
@@ -38,6 +40,7 @@ var check_answer = function () {
     if (submission == true_answer) {
         $('#submit.click_option').attr('data-target','#cModal');
         bar.stop();
+        $('.my_tick')[0].pause();
     } else {
         $('#submit.click_option').attr('data-target','#wModal');
     }
