@@ -1,4 +1,4 @@
-["Which company holds this tagline '<b>making tomorrow brighter</b>'", "NTPC", "CESC", "ONGC", "IOCL", "4"]
+["Which company holds this tagline '<b>making tomorrow brighter</b>'", "NTPC", "CESC", "ONGC", "IOCL", "3"]
 ["The elongation of a conical bar under its own weight is __________ that of prismatic bar of the same length.", "one-third", "equal to", "half", "two-third", "1"]
 ["A double overhung Pelton wheel has", "two runners", "two jets", "four jets", "four runners", "1"]
 ["Which type of the pump is different from others in the same group ?", "Screw pump", "Gear pump", "Cam and piston pump", "Plunger pump", "4"]

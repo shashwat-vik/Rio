@@ -2,4 +2,4 @@
 ["Both nucleation and growth require change in free energy to be zero.", "TRUE", "FALSE", "2"]
 ["'Queens berry Rules' is the name given to the rules in Boxing.", "TRUE", "FALSE", "1"]
 ["Whitworth quick return motion mechanism consists of three turning pairs and one sliding pair.", "TRUE", "FALSE", "1"]
-["The thermal diffusivity for solids is generally less than those for liquid and gasses.", "TRUE", "TRUE", "2"]
+["The thermal diffusivity for solids is generally less than those for liquid and gasses.", "TRUE", "FALSE", "2"]

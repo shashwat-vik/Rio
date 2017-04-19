@@ -4,3 +4,5 @@
 ["<b>'Vorsprung durch Technik'</b> <br>Which company holds this tagline, meaning <br> 'Advancement through Technology'?", "Audi"]
 ["<b>'REHVA'</b><br> What does it stands for ?", "Federation Of European Heating Ventilation and Air Conditioning Association"]
 ["Name the major isotope present in steam generated in a Boiling Water Reactor?", "N-16"]
+["The number of slots in 25mm castle nut:", "6"]
+["The included angle for British association thread is :", "55 degree"]

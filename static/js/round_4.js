@@ -62,10 +62,10 @@ var bar = new ProgressBar.Circle(timer, {
   text: {
     autoStyleContainer: false
   },
-  duration: 10000,
+  duration: 30000,
   // Set default step function for all animate calls
   step: function(state, circle) {
-    var value = Math.round(circle.value() * 10);
+    var value = Math.round(circle.value() * 30);
     if (value === 0) {
       circle.setText('');
     } else {
